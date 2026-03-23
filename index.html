@@ -561,6 +561,73 @@
           </div>
 
 
+
+          <div class="card">
+            <div class="project-title">Clasificación Multilabel de Sonidos de Animales</div>
+            <div class="project-sub">Espectrogramas de Mel + CNN + Métricas Avanzadas</div>
+          
+            <p class="project-body" style="margin-top:8px;">
+              Sistema de clasificación multilabel capaz de identificar múltiples especies animales a partir de audio. 
+              Cada clip se transforma en un espectrograma de Mel y se procesa mediante una red neuronal convolucional. 
+              El modelo produce probabilidades por clase, logits y métricas avanzadas como F1, mAP, precisión macro/micro y recall.
+            </p>
+          
+            <!-- Sección 1: Espectrogramas -->
+            <div style="
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 10px;
+              margin-top: 12px;
+            ">
+              <img src="images/MEL_spectogram.png" class="img-clickable" style="width:100%; border-radius:10px;">
+              <img src="images/frecuency_chart.png" class="img-clickable" style="width:100%; border-radius:10px;">
+            </div>
+          
+            <!-- Sección 2: Métricas -->
+            <div style="
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 10px;
+              margin-top: 12px;
+            ">
+
+            <img src="images/Precision_micro.svg" class="img-clickable" style="width:100%; border-radius:10px;">
+            <img src="images/Precision_macro.svg" class="img-clickable" style="width:100%; border-radius:10px;">
+            
+            <img src="images/Recall_micro.svg" class="img-clickable" style="width:100%; border-radius:10px;">
+            <img src="images/Recall_macro.svg" class="img-clickable" style="width:100%; border-radius:10px;">
+            
+            <img src="images/F1_micro.svg" class="img-clickable" style="width:100%; border-radius:10px;">
+            <img src="images/F1_macro.svg" class="img-clickable" style="width:100%; border-radius:10px;">
+            
+            <img src="images/Precision_micro.svg" class="img-clickable" style="width:100%; border-radius:10px;">
+            <img src="images/Precision_micro.svg" class="img-clickable" style="width:100%; border-radius:10px;">
+            
+            
+            <img src="images/training loss.svg" class="img-clickable" style="width:100%; border-radius:10px;">
+            <img src="images/Validation loss.svg" class="img-clickable" style="width:100%; border-radius:10px;">
+
+            <img src="images/probabilities.png" class="img-clickable" style="width:100%; border-radius:10px;">
+            <img src="images/probabilities_histogram.png" class="img-clickable" style="width:100%; border-radius:10px;">
+            
+            <img src="images/logits.png" class="img-clickable" style="width:100%; border-radius:10px;">
+            <img src="images/logits_histogram.png" class="img-clickable" style="width:100%; border-radius:10px;">
+             
+            </div>
+          
+            <p class="project-body" style="margin-top:12px;">
+              Las imágenes incluyen espectrogramas normal y Mel, así como métricas de evaluación del modelo: F1-score, 
+              probabilidades por clase, logits, precisión macro/micro, recall, mAP y curvas de loss de entrenamiento y validación.
+            </p>
+          
+          </div>
+
+
+
+
+
+          
+
           <div class="card">
             <div class="project-title">RAG para Gestión Documental</div>
             <div class="project-sub">Recuperación aumentada por generación</div>
