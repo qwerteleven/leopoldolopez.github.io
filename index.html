@@ -332,21 +332,42 @@
             </div>
           </div>
 
-          <div class="card">
-            <div class="project-title">OCR Marítimo + Integración AIS</div>
-            <div class="project-sub">Identificación de embarcaciones</div>
-            <div class="project-body">
-              <ul>
-                <li>Pipeline OCR para lectura de identificadores de barcos.</li>
-                <li>Integración con datos AIS y APIs portuarias.</li>
-              </ul>
-              <div class="pill-row">
-                <span class="pill">Python</span>
-                <span class="pill">OCR</span>
-                <span class="pill">AWS</span>
-              </div>
-            </div>
-          </div>
+      <div class="card">
+        <div class="project-title">OCR Marítimo + Integración AIS</div>
+        <div class="project-sub">Pipeline visual del sistema OCR</div>
+      
+        <div style="
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 10px;
+          margin-top: 12px;
+        ">
+          <!-- Imagen original -->
+          <img src="images/produccion_OCR.jpeg"
+               alt="Imagen original OCR"
+               style="width:100%; border-radius:10px;">
+      
+          <!-- Imagen procesada (texto detectado) -->
+          <img src="images/test_general_OCR.jpeg"
+               alt="OCR procesado"
+               style="width:100%; border-radius:10px;">
+      
+          <!-- Heatmap o mapa de activación -->
+          <img src="images/test_lejano_OCR.jpeg"
+               alt="Heatmap OCR"
+               style="width:100%; border-radius:10px;">
+      
+          <!-- GIF del proceso OCR -->
+          <img src="images/OCR.gif"
+               alt="GIF OCR"
+               style="width:100%; border-radius:10px;">
+        </div>
+      
+        <p class="project-body" style="margin-top:12px;">
+          Collage 2×2 mostrando el pipeline OCR: imagen original, preprocesado, heatmap y animación del proceso.
+        </p>
+      </div>
+
 
           <div class="card">
             <div class="project-title">RAG para Gestión Documental</div>
