@@ -585,11 +585,10 @@
                   Espectograma de MEL | Frecuencia de Audio
                 </div>
               <img src="images/MEL_spectogram.png" class="img-clickable" style="width:100%; border-radius:10px;">
+                
               <img src="images/frecuency_chart.png" class="img-clickable" style="width:100%; border-radius:10px;">
               </div>
 
-              <img src="images/MEL_spectogram.png" class="img-clickable" style="width:100%; border-radius:10px;">
-              <img src="images/frecuency_chart.png" class="img-clickable" style="width:100%; border-radius:10px;">
             </div>
           
             <!-- Sección 2: Métricas -->
@@ -599,76 +598,193 @@
               gap: 10px;
               margin-top: 12px;
             ">
-
-
-          <div>
-            <div style="font-weight:600; margin-bottom:6px; text-align:center;">
-              Precision micro | Precision macro
-            </div>
-            <img src="images/Precision_micro.svg" class="img-clickable" style="width:100%; border-radius:10px;">
-            <img src="images/Precision_macro.svg" class="img-clickable" style="width:100%; border-radius:10px;">
-          </div>
-
               
-          <div>
-            <div style="font-weight:600; margin-bottom:6px; text-align:center;">
-              Recall micro | Recall macro
+            <!-- Columna izquierda -->
+            <div>
+              <div style="font-weight:600; margin-bottom:6px; text-align:center;">
+                Precision micro
+              </div>
+              <img src="images/Precision_micro.svg" 
+                   class="img-clickable" 
+                   style="width:100%; border-radius:10px;">
             </div>
-            <img src="images/Recall_micro.svg" class="img-clickable" style="width:100%; border-radius:10px;">
-            <img src="images/Recall_macro.svg" class="img-clickable" style="width:100%; border-radius:10px;">
-          </div>
-
-              
-
-          <div>
-            <div style="font-weight:600; margin-bottom:6px; text-align:center;">
-              F1 micro | F1 macro
-            </div>
-            <img src="images/F1_micro.svg" class="img-clickable" style="width:100%; border-radius:10px;">
-            <img src="images/F1_macro.svg" class="img-clickable" style="width:100%; border-radius:10px;">
-          </div>
-
-
-
-          <div>
-            <div style="font-weight:600; margin-bottom:6px; text-align:center;">
-              training loss | Validation loss
-            </div>
-            <img src="images/training loss.svg" class="img-clickable" style="width:100%; border-radius:10px;">
-            <img src="images/Validation loss.svg" class="img-clickable" style="width:100%; border-radius:10px;">
-          </div>
-
-              
-
-          <div>
-            <div style="font-weight:600; margin-bottom:6px; text-align:center;">
-              Probabilidad clases | Histograma probabilidad clases
-            </div>
-            <img src="images/probabilities.png" class="img-clickable" style="width:100%; border-radius:10px;">
-            <img src="images/probabilities_histogram.png" class="img-clickable" style="width:100%; border-radius:10px;">
-          </div>
-
-              
-          <div>
-            <div style="font-weight:600; margin-bottom:6px; text-align:center;">
-              Logits | Histograma Logits
-            </div>
-            <img src="images/logits.png" class="img-clickable" style="width:100%; border-radius:10px;">
-            <img src="images/logits_histogram.png" class="img-clickable" style="width:100%; border-radius:10px;">
-          </div>
-             
-          </div>
           
-            <p class="project-body" style="margin-top:12px;">
-              Las imágenes incluyen espectrogramas normal y Mel, así como métricas de evaluación del modelo: F1-score, 
-              probabilidades por clase, logits, precisión macro/micro, recall, mAP y curvas de loss de entrenamiento y validación.
-            </p>
+            <!-- Columna derecha -->
+            <div>
+              <div style="font-weight:600; margin-bottom:6px; text-align:center;">
+                 Precision macro
+              </div>
+              <img src="images/Precision_macro.svg" 
+                   class="img-clickable" 
+                   style="width:100%; border-radius:10px;">
+            </div>
           
           </div>
 
 
 
+            
+            <div style="
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 10px;
+              margin-top: 12px;
+            ">
 
+            <!-- Columna izquierda -->
+            <div>
+              <div style="font-weight:600; margin-bottom:6px; text-align:center;">
+                 Recall micro
+              </div>
+              <img src="images/Recall_micro.svg" 
+                   class="img-clickable" 
+                   style="width:100%; border-radius:10px;">
+            </div>
+          
+            <!-- Columna derecha -->
+            <div>
+              <div style="font-weight:600; margin-bottom:6px; text-align:center;">
+                Recall macro
+              </div>
+              <img src="images/Recall_macro.svg" 
+                   class="img-clickable" 
+                   style="width:100%; border-radius:10px;">
+            </div>
+          
+          </div>
+
+
+                        
+            <div style="
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 10px;
+              margin-top: 12px;
+            ">
+
+            <!-- Columna izquierda -->
+            <div>
+              <div style="font-weight:600; margin-bottom:6px; text-align:center;">
+                 F1 micro
+              </div>
+              <img src="images/F1_micro.svg" 
+                   class="img-clickable" 
+                   style="width:100%; border-radius:10px;">
+            </div>
+          
+            <!-- Columna derecha -->
+            <div>
+              <div style="font-weight:600; margin-bottom:6px; text-align:center;">
+                F1 macro
+              </div>
+              <img src="images/F1_macro.svg" 
+                   class="img-clickable" 
+                   style="width:100%; border-radius:10px;">
+            </div>
+          
+          </div>
+            
+
+
+
+                        
+            <div style="
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 10px;
+              margin-top: 12px;
+            ">
+
+            <!-- Columna izquierda -->
+            <div>
+              <div style="font-weight:600; margin-bottom:6px; text-align:center;">
+                 training loss
+              </div>
+              <img src="images/training loss.svg" 
+                   class="img-clickable" 
+                   style="width:100%; border-radius:10px;">
+            </div>
+          
+            <!-- Columna derecha -->
+            <div>
+              <div style="font-weight:600; margin-bottom:6px; text-align:center;">
+                Validation loss
+              </div>
+              <img src="images/Validation loss.svg" 
+                   class="img-clickable" 
+                   style="width:100%; border-radius:10px;">
+            </div>
+          
+          </div>
+            
+            
+
+
+                         
+            <div style="
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 10px;
+              margin-top: 12px;
+            ">
+
+            <!-- Columna izquierda -->
+            <div>
+              <div style="font-weight:600; margin-bottom:6px; text-align:center;">
+                  Probabilidad clases
+              </div>
+              <img src="images/probabilities.png" 
+                   class="img-clickable" 
+                   style="width:100%; border-radius:10px;">
+            </div>
+          
+            <!-- Columna derecha -->
+            <div>
+              <div style="font-weight:600; margin-bottom:6px; text-align:center;">
+               Histograma probabilidad clases
+              </div>
+              <img src="images/probabilities_histogram.png" 
+                   class="img-clickable" 
+                   style="width:100%; border-radius:10px;">
+            </div>
+          
+          </div>
+            
+              
+
+
+                         
+            <div style="
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 10px;
+              margin-top: 12px;
+            ">
+
+            <!-- Columna izquierda -->
+            <div>
+              <div style="font-weight:600; margin-bottom:6px; text-align:center;">
+                  Logits
+              </div>
+              <img src="images/logits.png" 
+                   class="img-clickable" 
+                   style="width:100%; border-radius:10px;">
+            </div>
+          
+            <!-- Columna derecha -->
+            <div>
+              <div style="font-weight:600; margin-bottom:6px; text-align:center;">
+                Histograma Logits
+              </div>
+              <img src="images/logits_histogram.png" 
+                   class="img-clickable" 
+                   style="width:100%; border-radius:10px;">
+            </div>
+          
+          </div>
+
+
+      </div>
 
           
 
