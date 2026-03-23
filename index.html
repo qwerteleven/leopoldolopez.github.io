@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Leopoldo López Reverón - Machine Learning Engineer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio de Leopoldo López Reverón, Machine Learning Engineer especializado en Computer Vision y sistemas de IA en producción." />
+  <style>
+    :root {
+      --bg: #050816;
+      --bg-alt: #0b1020;
+      --accent: #6366f1;
+      --accent-soft: #4f46e5;
+      --accent-light: #a5b4fc;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --card: #111827;
+      --border: #1f2937;
+      --radius: 10px;
+      --shadow: 0 18px 45px rgba(0,0,0,0.55);
+      --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-main);
+      background: radial-gradient(circle at top, #111827 0, #020617 55%, #000 100%);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent-light);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 32px 20px 60px;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-bottom: 40px;
+    }
+
+    @media (min-width: 768px) {
+      header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    .title-block h1 {
+      font-size: 2.4rem;
+      letter-spacing: 0.03em;
+    }
+
+    .title-block h2 {
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--accent-light);
+      margin-top: 6px;
+    }
+
+    .meta {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+
+    .meta span {
+      display: inline-block;
+      margin-right: 12px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .btn {
+      border-radius: 999px;
+      padding: 8px 16px;
+      font-size: 0.9rem;
+      border: 1px solid var(--accent);
+      color: var(--text);
+      background: transparent;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+      border-color: transparent;
+      box-shadow: 0 12px 30px rgba(79,70,229,0.45);
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.45);
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.1fr);
+      gap: 26px;
+    }
+
+    @media (max-width: 900px) {
+      main {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    section {
+      margin-bottom: 26px;
+    }
+
+    h3.section-title {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .card {
+      background: linear-gradient(145deg, #020617, #020617 40%, #020617 100%);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 16px 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .card + .card {
+      margin-top: 12px;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .pill {
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid #1f2937;
+      background: rgba(15,23,42,0.9);
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .project-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+      color: #e5e7ff;
+    }
+
+    .project-sub {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .project-body {
+      font-size: 0.86rem;
+      color: #d1d5db;
+    }
+
+    ul {
+      list-style: none;
+      margin-top: 4px;
+    }
+
+    ul li {
+      font-size: 0.86rem;
+      color: #d1d5db;
+      margin-bottom: 3px;
+      position: relative;
+      padding-left: 14px;
+    }
+
+    ul li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--accent-light);
+      font-size: 0.8rem;
+      top: 2px;
+    }
+
+    .stack-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 6px;
+    }
+
+    .stack-item {
+      font-size: 0.78rem;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: #020617;
+      border: 1px solid #1f2937;
+      color: var(--muted);
+    }
+
+    .contact {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.78rem;
+      color: #4b5563;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="title-block">
+        <h1>Leopoldo López Reverón</h1>
+        <h2>Machine Learning Engineer — Computer Vision & Applied AI</h2>
+        <div class="meta">
+          <span>📍 Las Palmas de Gran Canaria, España</span>
+          <span>📧 <a href="mailto:ll11ll1@outlook.es">ll11ll1@outlook.es</a></span>
+        </div>
+        <div class="actions">
+          <a class="btn btn-primary" href="#" target="_blank" rel="noreferrer">📄 Descargar CV</a>
+          <a class="btn" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">🔗 LinkedIn</a>
+          <a class="btn" href="https://github.com/" target="_blank" rel="noreferrer">💻 GitHub</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Columna izquierda -->
+      <div>
+        <section>
+          <h3 class="section-title">Sobre mí</h3>
+          <div class="card">
+            <p>
+              Soy Machine Learning Engineer especializado en <strong>Computer Vision</strong>, 
+              <strong>optimización de modelos</strong> y <strong>despliegue en producción</strong>.
+              He trabajado en proyectos reales de vigilancia marítima, análisis ambiental, RAG,
+              percepción 3D, tracking y segmentación semántica.
+            </p>
+            <p style="margin-top:8px;">
+              Combino investigación aplicada con ingeniería orientada a producto, construyendo 
+              soluciones de IA que funcionan en entornos reales y con requisitos de rendimiento.
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <h3 class="section-title">Proyectos destacados</h3>
+
+          <div class="card">
+            <div class="project-title">Depth Estimation con DPT (Percepción 3D)</div>
+            <div class="project-sub">Estimación de profundidad monocular en escenas costeras</div>
+            <div class="project-body">
+              <ul>
+                <li>Generación de mapas de profundidad para análisis estructural y vigilancia marítima.</li>
+                <li>Integración con pipelines de tracking y segmentación.</li>
+              </ul>
+              <div class="pill-row">
+                <span class="pill">Python</span>
+                <span class="pill">PyTorch</span>
+                <span class="pill">DPT</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="project-title">Tracking de Embarcaciones (EasyTracker + Kalman Filter)</div>
+            <div class="project-sub">Seguimiento multi‑objeto en vídeo</div>
+            <div class="project-body">
+              <ul>
+                <li>Implementación de Kalman Filter para predicción y suavizado de trayectorias.</li>
+                <li>Asociación robusta de detecciones e integración con datos AIS.</li>
+              </ul>
+              <div class="pill-row">
+                <span class="pill">Python</span>
+                <span class="pill">OpenCV</span>
+                <span class="pill">Kalman Filter</span>
+                <span class="pill">EasyTracker</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="project-title">Segmentación Semántica (Costa, Mar, Espuma)</div>
+            <div class="project-sub">Visión semántica aplicada a vigilancia costera</div>
+            <div class="project-body">
+              <ul>
+                <li>Modelo de segmentación para delimitar zonas costeras y marítimas.</li>
+                <li>Aplicación en geofencing y análisis ambiental con condiciones variables.</li>
+              </ul>
+              <div class="pill-row">
+                <span class="pill">Python</span>
+                <span class="pill">PyTorch</span>
+                <span class="pill">Segmentation</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="project-title">PPE Detection System (Producción)</div>
+            <div class="project-sub">Cumplimiento de EPI en tiempo real</div>
+            <div class="project-body">
+              <ul>
+                <li>Uso de InternImage‑L, ViTPose y YOLOv7 para detección y análisis de EPI.</li>
+                <li>Optimización con TensorRT y despliegue en entornos productivos.</li>
+              </ul>
+              <div class="pill-row">
+                <span class="pill">YOLOv7</span>
+                <span class="pill">InternImage‑L</span>
+                <span class="pill">ViTPose</span>
+                <span class="pill">TensorRT</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="project-title">OCR Marítimo + Integración AIS</div>
+            <div class="project-sub">Identificación de embarcaciones</div>
+            <div class="project-body">
+              <ul>
+                <li>Pipeline OCR para lectura de identificadores de barcos.</li>
+                <li>Integración con datos AIS y APIs portuarias.</li>
+              </ul>
+              <div class="pill-row">
+                <span class="pill">Python</span>
+                <span class="pill">OCR</span>
+                <span class="pill">AWS</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="project-title">RAG para Gestión Documental</div>
+            <div class="project-sub">Recuperación aumentada por generación</div>
+            <div class="project-body">
+              <ul>
+                <li>Arquitectura con chunking, embeddings y recuperación semántica.</li>
+                <li>Librerías propias para preprocesamiento e integración con sistemas conversacionales.</li>
+              </ul>
+              <div class="pill-row">
+                <span class="pill">Python</span>
+                <span class="pill">ChromaDB</span>
+                <span class="pill">HuggingFace</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="project-title">Super‑Resolución Satelital</div>
+            <div class="project-sub">Mejora de imágenes polarizadas</div>
+            <div class="project-body">
+              <ul>
+                <li>Mejora de calidad para análisis ambiental.</li>
+                <li>Pipelines de entrenamiento optimizados para cloud.</li>
+              </ul>
+              <div class="pill-row">
+                <span class="pill">Python</span>
+                <span class="pill">PyTorch</span>
+                <span class="pill">Super‑Resolution</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Columna derecha -->
+      <div>
+        <section>
+          <h3 class="section-title">Tech stack</h3>
+          <div class="card">
+            <div class="stack-grid">
+              <span class="stack-item">Python</span>
+              <span class="stack-item">PyTorch</span>
+              <span class="stack-item">TensorFlow</span>
+              <span class="stack-item">HuggingFace</span>
+              <span class="stack-item">OpenCV</span>
+              <span class="stack-item">FFMPEG</span>
+              <span class="stack-item">YOLO</span>
+              <span class="stack-item">InternImage</span>
+              <span class="stack-item">ViTPose</span>
+              <span class="stack-item">DPT</span>
+              <span class="stack-item">TensorRT</span>
+              <span class="stack-item">ONNX</span>
+              <span class="stack-item">Kalman Filter</span>
+              <span class="stack-item">EasyTracker</span>
+              <span class="stack-item">FastAPI</span>
+              <span class="stack-item">Docker</span>
+              <span class="stack-item">AWS</span>
+              <span class="stack-item">CI/CD</span>
+              <span class="stack-item">PostgreSQL</span>
+              <span class="stack-item">MongoDB</span>
+              <span class="stack-item">ChromaDB</span>
+              <span class="stack-item">RAG</span>
+              <span class="stack-item">OCR</span>
+              <span class="stack-item">Geospatial AI</span>
+              <span class="stack-item">ETL</span>
+              <span class="stack-item">Segmentación semántica</span>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h3 class="section-title">Publicaciones</h3>
+          <div class="card">
+            <ul>
+              <li><em>Automated PPE compliance monitoring in industrial environments</em> — Automation in Construction, 2025</li>
+              <li><em>Maritime Surveillance by Multiple Data Fusion</em> — VISIGRAPP 2023</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h3 class="section-title">Contacto</h3>
+          <div class="card contact">
+            <p>Si quieres colaborar, hablar sobre proyectos o simplemente conectar:</p>
+            <p style="margin-top:6px;">
+              📧 <a href="mailto:ll11ll1@outlook.es">ll11ll1@outlook.es</a><br />
+              🔗 <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a><br />
+              💻 <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      © <span id="year"></span> Leopoldo López Reverón — Machine Learning Engineer
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
