@@ -383,21 +383,40 @@
 
           <div class="card">
             <div class="project-title">Super‑Resolución Satelital</div>
-            <div class="project-sub">Mejora de imágenes polarizadas</div>
-            <div class="project-body">
-              <ul>
-                <li>Mejora de calidad para análisis ambiental.</li>
-                <li>Pipelines de entrenamiento optimizados para cloud.</li>
-              </ul>
-              <div class="pill-row">
-                <span class="pill">Python</span>
-                <span class="pill">PyTorch</span>
-                <span class="pill">Super‑Resolution</span>
-              </div>
+            <div class="project-sub">Comparativa antes/después + zoom, fuente SENTINEL - II</div>
+          
+            <div style="
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 10px;
+              margin-top: 12px;
+            ">
+              <!-- Imagen original -->
+              <img src="images/original_SR.jpg"
+                   alt="Imagen satelital original"
+                   style="width:100%; border-radius:10px;">
+          
+              <!-- Imagen super-resuelta -->
+              <img src="images/SR.jpg"
+                   alt="Imagen super-resuelta"
+                   style="width:100%; border-radius:10px;">
+          
+              <!-- Zoom original -->
+              <img src="images/original_zoom.jpg"
+                   alt="Zoom original"
+                   style="width:100%; border-radius:10px;">
+          
+              <!-- Zoom super-resuelto -->
+              <img src="images/SR_zoom.jpg"
+                   alt="Zoom super-resuelto"
+                   style="width:100%; border-radius:10px;">
             </div>
+          
+            <p class="project-body" style="margin-top:12px;">
+              Comparativa 2×2 mostrando la imagen original, la versión super‑resuelta y los zooms de ambas.
+            </p>
           </div>
-        </section>
-      </div>
+
 
       <!-- Columna derecha -->
       <div>
