@@ -573,24 +573,38 @@
             </p>
           
             <!-- Sección 1: Espectrogramas -->
+
+
             <div style="
               display: grid;
               grid-template-columns: 1fr 1fr;
               gap: 10px;
               margin-top: 12px;
             ">
-
-              <div>
-                <div style="font-weight:600; margin-bottom:6px; text-align:center;">
-                  Espectograma de MEL | Frecuencia de Audio
-                </div>
-              <img src="images/MEL_spectogram.png" class="img-clickable" style="width:100%; border-radius:10px;">
-                
-              <img src="images/frecuency_chart.png" class="img-clickable" style="width:100%; border-radius:10px;">
+              
+            <!-- Columna izquierda -->
+            <div>
+              <div style="font-weight:600; margin-bottom:6px; text-align:center;">
+                Espectograma de MEL
               </div>
-
+              <img src="images/MEL_spectogram.png" 
+                   class="img-clickable" 
+                   style="width:100%; border-radius:10px;">
             </div>
           
+            <!-- Columna derecha -->
+            <div>
+              <div style="font-weight:600; margin-bottom:6px; text-align:center;">
+                 Frecuencia de Audio
+              </div>
+              <img src="images/frecuency_chart.png" 
+                   class="img-clickable" 
+                   style="width:100%; border-radius:10px;">
+            </div>
+          
+          </div>
+
+            
             <!-- Sección 2: Métricas -->
             <div style="
               display: grid;
